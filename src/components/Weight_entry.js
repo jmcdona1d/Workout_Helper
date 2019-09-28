@@ -1,14 +1,15 @@
 import React from "react";
+import RepList from "./RepList";
 
 export default class NameForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       valuesEntered: false,
-      value: "",
-      value2: "",
-      value3: 8,
-      value4: "",
+      dead: "",
+      ohp: "",
+      squat: "",
+      bench: "",
       weekNum: 1,
       percentage1: 0.65
     };
@@ -16,6 +17,7 @@ export default class NameForm extends React.Component {
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.changeWeek = this.changeWeek.bind(this);
+    this.editValues = this.editValues.bind(this);
   }
 
   handleInputChange(event) {
@@ -28,8 +30,18 @@ export default class NameForm extends React.Component {
     });
   }
   handleSubmit(event) {
-    this.setState({ valuesEntered: true });
-    event.preventDefault();
+    if (
+      this.state.dead == "" ||
+      this.state.ohp == "" ||
+      this.state.squat == "" ||
+      this.state.bench == ""
+    ) {
+      alert("Fill in all boxes please");
+      event.preventDefault();
+    } else {
+      this.setState({ valuesEntered: true });
+      event.preventDefault();
+    }
   }
 
   changeWeek(event) {
@@ -58,6 +70,10 @@ export default class NameForm extends React.Component {
     this.setState({ weekNum: week });
   }
 
+  editValues(event) {
+    this.setState({ valuesEntered: false });
+  }
+
   render() {
     if (!this.state.valuesEntered) {
       return (
@@ -67,9 +83,9 @@ export default class NameForm extends React.Component {
               <label>
                 Name:
                 <input
-                  name="value1"
+                  name="dead"
                   type="number"
-                  value={this.state.value1}
+                  value={this.state.dead}
                   onChange={this.handleInputChange}
                 />
               </label>
@@ -78,9 +94,9 @@ export default class NameForm extends React.Component {
               <label>
                 Name:
                 <input
-                  name="value2"
+                  name="ohp"
                   type="number"
-                  value={this.state.value2}
+                  value={this.state.ohp}
                   onChange={this.handleInputChange}
                 />
               </label>
@@ -89,9 +105,9 @@ export default class NameForm extends React.Component {
               <label>
                 Name:
                 <input
-                  name="value3"
+                  name="squat"
                   type="number"
-                  value={this.state.value3}
+                  value={this.state.squat}
                   onChange={this.handleInputChange}
                 />
               </label>
@@ -100,9 +116,9 @@ export default class NameForm extends React.Component {
               <label>
                 Name:
                 <input
-                  name="value4"
+                  name="bench"
                   type="number"
-                  value={this.state.value4}
+                  value={this.state.bench}
                   onChange={this.handleInputChange}
                 />
               </label>
@@ -112,19 +128,70 @@ export default class NameForm extends React.Component {
         </ul>
       );
     } else {
-      var bench = parseInt(this.state.value3);
+      var Dead = parseInt(this.state.dead);
+      var OHP = parseInt(this.state.ohp);
+      var Squat = parseInt(this.state.squat);
+      var Bench = parseInt(this.state.bench);
 
       return (
         <div>
-          <h2>Weights to use for week {this.state.weekNum}:</h2>
-          <ul>
-            <li>{(bench * this.state.percentage1).toFixed(0)}</li>
+          <h2>Weights for week {this.state.weekNum}:</h2>
 
-            <li>{(bench * (this.state.percentage1 + 0.1)).toFixed(0)}</li>
+          <RepList week={this.state.weekNum} />
 
-            <li>{(bench * (this.state.percentage1 + 0.2)).toFixed(0)}</li>
-          </ul>
+          <table>
+            <tr>
+              <th> Deadlift </th>
+              <th> Overhead Press </th>
+              <th> Squat </th>
+              <th> Bench Press </th>
+            </tr>
+            <tr>
+              <td align="center">
+                {(Dead * this.state.percentage1).toFixed(0)}
+              </td>
+              <td align="center">
+                {(OHP * this.state.percentage1).toFixed(0)}
+              </td>
+              <td align="center">
+                {(Squat * this.state.percentage1).toFixed(0)}
+              </td>
+              <td align="center">
+                {(Bench * this.state.percentage1).toFixed(0)}
+              </td>
+            </tr>
+            <tr>
+              <td align="center">
+                {(Dead * (this.state.percentage1 + 0.1)).toFixed(0)}
+              </td>
+              <td align="center">
+                {(OHP * (this.state.percentage1 + 0.1)).toFixed(0)}
+              </td>
+              <td align="center">
+                {(Squat * (this.state.percentage1 + 0.1)).toFixed(0)}
+              </td>
+              <td align="center">
+                {(Bench * (this.state.percentage1 + 0.1)).toFixed(0)}
+              </td>
+            </tr>
+            <tr>
+              <td align="center">
+                {(Dead * (this.state.percentage1 + 0.2)).toFixed(0)}
+              </td>
+              <td align="center">
+                {(OHP * (this.state.percentage1 + 0.2)).toFixed(0)}
+              </td>
+              <td align="center">
+                {(Squat * (this.state.percentage1 + 0.2)).toFixed(0)}
+              </td>
+              <td align="center">
+                {(Bench * (this.state.percentage1 + 0.2)).toFixed(0)}
+              </td>
+            </tr>
+          </table>
+
           <button onClick={this.changeWeek}>Cycle Weeks</button>
+          <button onClick={this.editValues}>Edit 1 Rep Maxes</button>
         </div>
       );
     }
