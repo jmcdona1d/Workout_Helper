@@ -81,7 +81,7 @@ export default class NameForm extends React.Component {
           <form onSubmit={this.handleSubmit}>
             <li>
               <label>
-                Name:
+                Deadlift:
                 <input
                   name="dead"
                   type="number"
@@ -92,7 +92,7 @@ export default class NameForm extends React.Component {
             </li>
             <li>
               <label>
-                Name:
+                Overhead Press:
                 <input
                   name="ohp"
                   type="number"
@@ -103,7 +103,7 @@ export default class NameForm extends React.Component {
             </li>
             <li>
               <label>
-                Name:
+                Squat:
                 <input
                   name="squat"
                   type="number"
@@ -114,7 +114,7 @@ export default class NameForm extends React.Component {
             </li>
             <li>
               <label>
-                Name:
+                Bench Press:
                 <input
                   name="bench"
                   type="number"
