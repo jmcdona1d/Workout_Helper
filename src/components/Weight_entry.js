@@ -1,5 +1,8 @@
 import React from "react";
 import RepList from "./RepList";
+import Header from "./Header";
+
+import { Container, Row, Col } from "react-bootstrap";
 
 export default class NameForm extends React.Component {
   constructor(props) {
@@ -77,65 +80,70 @@ export default class NameForm extends React.Component {
   render() {
     if (!this.state.valuesEntered) {
       return (
-        <form onSubmit={this.handleSubmit}>
-          <div class="row">
-            <div class="col-md-2">
-              <label>Deadlift: </label>
-            </div>
-            <div class="col-md-10">
-              <input
-                name="dead"
-                type="number"
-                value={this.state.dead}
-                onChange={this.handleInputChange}
-              />
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-2">
-              <label>Overhead Press:</label>
-            </div>
-            <div class="col-md-10">
-              <input
-                name="ohp"
-                type="number"
-                value={this.state.ohp}
-                onChange={this.handleInputChange}
-              />
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-2">
-              <label>Squat:</label>
-            </div>
-            <div class="col-md-10">
-              <input
-                name="squat"
-                type="number"
-                value={this.state.squat}
-                onChange={this.handleInputChange}
-              />
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-2">
-              <label>Bench Press:</label>
-            </div>
-            <div class="col-md-10">
-              <input
-                name="bench"
-                type="number"
-                value={this.state.bench}
-                onChange={this.handleInputChange}
-              />
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-2">
-              <input type="submit" value="Submit" />
-            </div>
-          </div>
-        </form>
+        <Container>
+          <Row>
+            <h3>Please enter 1 Rep Maxes:</h3>
+          </Row>
+          <form onSubmit={this.handleSubmit}>
+            <Row>
+              <div class="col-md-2">
+                <label>Deadlift: </label>
+              </div>
+              <div class="col-md-10">
+                <input
+                  name="dead"
+                  type="number"
+                  value={this.state.dead}
+                  onChange={this.handleInputChange}
+                />
+              </div>
+            </Row>
+            <Row>
+              <div class="col-md-2">
+                <label>Overhead Press:</label>
+              </div>
+              <div class="col-md-10">
+                <input
+                  name="ohp"
+                  type="number"
+                  value={this.state.ohp}
+                  onChange={this.handleInputChange}
+                />
+              </div>
+            </Row>
+            <Row>
+              <div class="col-md-2">
+                <label>Squat:</label>
+              </div>
+              <div class="col-md-10">
+                <input
+                  name="squat"
+                  type="number"
+                  value={this.state.squat}
+                  onChange={this.handleInputChange}
+                />
+              </div>
+            </Row>
+            <Row>
+              <div class="col-md-2">
+                <label>Bench Press:</label>
+              </div>
+              <div class="col-md-10">
+                <input
+                  name="bench"
+                  type="number"
+                  value={this.state.bench}
+                  onChange={this.handleInputChange}
+                />
+              </div>
+            </Row>
+            <Row>
+              <div class="col-md-2">
+                <input type="submit" value="Submit" />
+              </div>
+            </Row>
+          </form>
+        </Container>
       );
     } else {
       var Dead = parseInt(this.state.dead);
