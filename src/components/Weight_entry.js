@@ -31,10 +31,10 @@ export default class NameForm extends React.Component {
   }
   handleSubmit(event) {
     if (
-      this.state.dead == "" ||
-      this.state.ohp == "" ||
-      this.state.squat == "" ||
-      this.state.bench == ""
+      this.state.dead === "" ||
+      this.state.ohp === "" ||
+      this.state.squat === "" ||
+      this.state.bench === ""
     ) {
       alert("Fill in all boxes please");
       event.preventDefault();
@@ -77,55 +77,65 @@ export default class NameForm extends React.Component {
   render() {
     if (!this.state.valuesEntered) {
       return (
-        <ul>
-          <form onSubmit={this.handleSubmit}>
-            <li>
-              <label>
-                Deadlift:
-                <input
-                  name="dead"
-                  type="number"
-                  value={this.state.dead}
-                  onChange={this.handleInputChange}
-                />
-              </label>
-            </li>
-            <li>
-              <label>
-                Overhead Press:
-                <input
-                  name="ohp"
-                  type="number"
-                  value={this.state.ohp}
-                  onChange={this.handleInputChange}
-                />
-              </label>
-            </li>
-            <li>
-              <label>
-                Squat:
-                <input
-                  name="squat"
-                  type="number"
-                  value={this.state.squat}
-                  onChange={this.handleInputChange}
-                />
-              </label>
-            </li>
-            <li>
-              <label>
-                Bench Press:
-                <input
-                  name="bench"
-                  type="number"
-                  value={this.state.bench}
-                  onChange={this.handleInputChange}
-                />
-              </label>
-            </li>
-            <input type="submit" value="Submit" />
-          </form>
-        </ul>
+        <form onSubmit={this.handleSubmit}>
+          <div class="row">
+            <div class="col-md-2">
+              <label>Deadlift: </label>
+            </div>
+            <div class="col-md-10">
+              <input
+                name="dead"
+                type="number"
+                value={this.state.dead}
+                onChange={this.handleInputChange}
+              />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-2">
+              <label>Overhead Press:</label>
+            </div>
+            <div class="col-md-10">
+              <input
+                name="ohp"
+                type="number"
+                value={this.state.ohp}
+                onChange={this.handleInputChange}
+              />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-2">
+              <label>Squat:</label>
+            </div>
+            <div class="col-md-10">
+              <input
+                name="squat"
+                type="number"
+                value={this.state.squat}
+                onChange={this.handleInputChange}
+              />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-2">
+              <label>Bench Press:</label>
+            </div>
+            <div class="col-md-10">
+              <input
+                name="bench"
+                type="number"
+                value={this.state.bench}
+                onChange={this.handleInputChange}
+              />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-2">
+              <input type="submit" value="Submit" />
+            </div>
+          </div>
+        </form>
       );
     } else {
       var Dead = parseInt(this.state.dead);

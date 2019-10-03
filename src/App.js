@@ -1,11 +1,11 @@
 import React from "react";
-import logo from "./logo.svg";
 import NameForm from "./components/Weight_entry";
 import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   return (
-    <div className="Main Page">
+    <div className="Main Page" class="container">
       <NameForm />
     </div>
   );
