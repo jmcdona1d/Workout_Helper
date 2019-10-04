@@ -32,7 +32,12 @@
   margin: 0 auto;
 }
 
-.hero {
+.h2-coloured {
+  color: whitesmoke;
+  font: Roboto;
+}
+
+#hero {
   background-image: url("resources/Deadlift_pic.jpg");
   background-size: cover;
   background-position: center center;
