@@ -4,12 +4,14 @@ import Header from "./components/Header";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Navbar } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 
 function App() {
   return (
-    <div className="Main Page" class="container">
-      <Header />
-      <NameForm />
+    <div>
+      <Header id="header-style" />
+      {/* <div id="hero-overlay" /> */}
+      <NameForm className="hero" />
     </div>
   );
 }

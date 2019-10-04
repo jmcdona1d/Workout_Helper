@@ -80,9 +80,11 @@ export default class NameForm extends React.Component {
   render() {
     if (!this.state.valuesEntered) {
       return (
-        <Container>
+        <div class="container" className="text-light rest">
           <Row>
-            <h3>Please enter 1 Rep Maxes:</h3>
+            <div class="col-md-5">
+              <h4>Please enter 1 Rep Maxes:</h4>
+            </div>
           </Row>
           <form onSubmit={this.handleSubmit}>
             <Row>
@@ -138,12 +140,12 @@ export default class NameForm extends React.Component {
               </div>
             </Row>
             <Row>
-              <div class="col-md-2">
+              <div className="col-md-5">
                 <input type="submit" value="Submit" />
               </div>
             </Row>
           </form>
-        </Container>
+        </div>
       );
     } else {
       var Dead = parseInt(this.state.dead);
