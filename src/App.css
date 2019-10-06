@@ -37,6 +37,10 @@
   font: Roboto;
 }
 
+#home {
+  background-color: blue;
+}
+
 #hero {
   background-image: url("resources/Deadlift_pic.jpg");
   background-size: cover;

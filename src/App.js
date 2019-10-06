@@ -14,7 +14,12 @@ import Jumbotron from "./components/Jumbotron";
 
 function App() {
   return (
-    <React.Fragment>
+    <div
+      style={{
+        backgroundColor: "grey",
+        zindex: -5
+      }}
+    >
       <Layout>
         <Router>
           <NavBar />
@@ -26,7 +31,7 @@ function App() {
           </Switch>
         </Router>
       </Layout>
-    </React.Fragment>
+    </div>
   );
 }
 
