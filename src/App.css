@@ -23,6 +23,11 @@
   color: #61dafb;
 }
 
+.Jumbotron-title {
+  /* color: rgb(91, 58, 236); */
+  color: white;
+}
+
 #header-style {
   background-color: blue;
 }

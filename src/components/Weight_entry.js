@@ -4,6 +4,14 @@ import Header from "./Header";
 
 import { Container, Row, Col } from "react-bootstrap";
 
+import styled from "styled-components";
+
+const Styles = styled.div`
+  .weightEntry {
+    z-index: 20;
+  }
+`;
+
 export default class NameForm extends React.Component {
   constructor(props) {
     super(props);
@@ -80,7 +88,7 @@ export default class NameForm extends React.Component {
   render() {
     if (!this.state.valuesEntered) {
       return (
-        <div class="container" className="text-light rest">
+        <Container className="weightEntry">
           <Row>
             <div class="col-md-5">
               <h4>Please enter 1 Rep Maxes:</h4>
@@ -145,7 +153,7 @@ export default class NameForm extends React.Component {
               </div>
             </Row>
           </form>
-        </div>
+        </Container>
       );
     } else {
       var Dead = parseInt(this.state.dead);
@@ -155,63 +163,38 @@ export default class NameForm extends React.Component {
 
       return (
         <div>
-          <h2>Weights for week {this.state.weekNum}:</h2>
-
+          <h4>Weights for week {this.state.weekNum}:</h4>{" "}
           <RepList week={this.state.weekNum} />
-
-          <table>
-            <tr>
-              <th> Deadlift </th>
-              <th> Overhead Press </th>
-              <th> Squat </th>
-              <th> Bench Press </th>
-            </tr>
-            <tr>
-              <td align="center">
-                {(Dead * this.state.percentage1).toFixed(0)}
-              </td>
-              <td align="center">
-                {(OHP * this.state.percentage1).toFixed(0)}
-              </td>
-              <td align="center">
-                {(Squat * this.state.percentage1).toFixed(0)}
-              </td>
-              <td align="center">
-                {(Bench * this.state.percentage1).toFixed(0)}
-              </td>
-            </tr>
-            <tr>
-              <td align="center">
-                {(Dead * (this.state.percentage1 + 0.1)).toFixed(0)}
-              </td>
-              <td align="center">
-                {(OHP * (this.state.percentage1 + 0.1)).toFixed(0)}
-              </td>
-              <td align="center">
-                {(Squat * (this.state.percentage1 + 0.1)).toFixed(0)}
-              </td>
-              <td align="center">
-                {(Bench * (this.state.percentage1 + 0.1)).toFixed(0)}
-              </td>
-            </tr>
-            <tr>
-              <td align="center">
-                {(Dead * (this.state.percentage1 + 0.2)).toFixed(0)}
-              </td>
-              <td align="center">
-                {(OHP * (this.state.percentage1 + 0.2)).toFixed(0)}
-              </td>
-              <td align="center">
-                {(Squat * (this.state.percentage1 + 0.2)).toFixed(0)}
-              </td>
-              <td align="center">
-                {(Bench * (this.state.percentage1 + 0.2)).toFixed(0)}
-              </td>
-            </tr>
-          </table>
-
-          <button onClick={this.changeWeek}>Cycle Weeks</button>
-          <button onClick={this.editValues}>Edit 1 Rep Maxes</button>
+          <Container>
+            <Row>
+              <Col>Deadlift</Col>
+              <Col>Deadlift</Col>
+              <Col>Deadlift</Col>
+              <Col>Deadlift</Col>
+            </Row>
+            <Row>
+              <Col>{(Dead * this.state.percentage1).toFixed(0)}</Col>
+              <Col>{(OHP * this.state.percentage1).toFixed(0)}</Col>
+              <Col>{(Squat * this.state.percentage1).toFixed(0)}</Col>
+              <Col>{(Bench * this.state.percentage1).toFixed(0)}</Col>
+            </Row>
+            <Row>
+              <Col>{(Dead * (this.state.percentage1 + 0.1)).toFixed(0)}</Col>
+              <Col>{(OHP * (this.state.percentage1 + 0.1)).toFixed(0)}</Col>
+              <Col>{(Squat * (this.state.percentage1 + 0.1)).toFixed(0)}</Col>
+              <Col>{(Bench * (this.state.percentage1 + 0.1)).toFixed(0)}</Col>
+            </Row>
+            <Row>
+              <Col>{(Dead * (this.state.percentage1 + 0.2)).toFixed(0)}</Col>
+              <Col>{(OHP * (this.state.percentage1 + 0.2)).toFixed(0)}</Col>
+              <Col>{(Squat * (this.state.percentage1 + 0.2)).toFixed(0)}</Col>
+              <Col>{(Bench * (this.state.percentage1 + 0.2)).toFixed(0)}</Col>
+            </Row>
+            <Col>
+              <button onClick={this.changeWeek}>Cycle Weeks</button>
+              <button onClick={this.editValues}>Edit 1 Rep Maxes</button>
+            </Col>
+          </Container>
         </div>
       );
     }
