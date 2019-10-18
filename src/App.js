@@ -11,6 +11,7 @@ import Jumbotron from "./components/Jumbotron";
 import Background from "./resources/pattern_background.png";
 //<a href="https://www.freepik.com/free-photos-vectors/background">Background vector created by starline - www.freepik.com</a>
 import styled from "styled-components";
+import BotJumbo from "./components/BottomJumbo";
 
 const Styles = styled.div`
   .globalMain {
@@ -37,6 +38,7 @@ function App() {
               <Route path="/About" component={About} />
               <Route component={NoMatch} />
             </Switch>
+            <BotJumbo />
           </Router>
         </Layout>
       </div>
