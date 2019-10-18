@@ -29,7 +29,8 @@ export default class BotJumbo extends React.Component {
               <i>
                 The Simplest and Most Effective Training System to Build Raw
                 Strength
-              </i>
+              </i>{" "}
+              - Jim wendler
             </h6>
           </Container>
         </Navbar>

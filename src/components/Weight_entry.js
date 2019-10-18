@@ -164,14 +164,15 @@ export default class NameForm extends React.Component {
 
       return (
         <div>
+          <h1></h1>
           <h4>Weights for week {this.state.weekNum}:</h4>{" "}
           <RepList week={this.state.weekNum} />
           <Container>
             <Row>
               <Col>Deadlift</Col>
-              <Col>Deadlift</Col>
-              <Col>Deadlift</Col>
-              <Col>Deadlift</Col>
+              <Col>Overhead Press</Col>
+              <Col>Squat</Col>
+              <Col>Bench Press</Col>
             </Row>
             <Row>
               <Col>{(Dead * this.state.percentage1).toFixed(0)}</Col>
@@ -196,6 +197,7 @@ export default class NameForm extends React.Component {
               <button onClick={this.editValues}>Edit 1 Rep Maxes</button>
             </Col>
           </Container>
+          <h1></h1>
         </div>
       );
     }
