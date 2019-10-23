@@ -25,13 +25,13 @@ export default class BotJumbo extends React.Component {
       <Styles>
         <Navbar fluid className="BotJumbo">
           <Container className="BotJumbo-title">
-            <h6 className="h5-coloured">
+            <h8 className="h5-coloured">
               <i>
                 The Simplest and Most Effective Training System to Build Raw
                 Strength
               </i>{" "}
               - Jim wendler
-            </h6>
+            </h8>
           </Container>
         </Navbar>
       </Styles>
