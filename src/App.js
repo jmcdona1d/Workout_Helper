@@ -12,6 +12,7 @@ import Background from "./resources/pattern_background.png";
 //<a href="https://www.freepik.com/free-photos-vectors/background">Background vector created by starline - www.freepik.com</a>
 import styled from "styled-components";
 import BotJumbo from "./components/BottomJumbo";
+import { Container } from "react-bootstrap";
 
 const Styles = styled.div`
   .globalMain {
@@ -26,23 +27,25 @@ const Styles = styled.div`
 
 function App() {
   return (
-    <Styles>
-      <div className="globalMain" />
-      <div>
-        <Layout>
-          <Router>
-            <NavBar />
-            <Jumbotron />
-            <Switch>
-              <Route exact path="/" component={Home} />
-              <Route path="/About" component={About} />
-              <Route component={NoMatch} />
-            </Switch>
-            <BotJumbo />
-          </Router>
-        </Layout>
-      </div>
-    </Styles>
+    <Container>
+      <Styles>
+        <div className="globalMain" />
+        <div>
+          <Layout>
+            <Router>
+              <NavBar />
+              <Jumbotron />
+              <Switch>
+                <Route exact path="/" component={Home} />
+                <Route path="/About" component={About} />
+                <Route component={NoMatch} />
+              </Switch>
+              <BotJumbo />
+            </Router>
+          </Layout>
+        </div>
+      </Styles>
+    </Container>
   );
 }
 

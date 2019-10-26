@@ -163,7 +163,7 @@ export default class NameForm extends React.Component {
       var Bench = parseInt(this.state.bench);
 
       return (
-        <div>
+        <Container>
           <h1></h1>
           <h4>Weights for week {this.state.weekNum}:</h4>{" "}
           <RepList week={this.state.weekNum} />
@@ -198,7 +198,7 @@ export default class NameForm extends React.Component {
             </Col>
           </Container>
           <h1></h1>
-        </div>
+        </Container>
       );
     }
   }
