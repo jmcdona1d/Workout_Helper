@@ -27,7 +27,7 @@ const Styles = styled.div`
 
 function App() {
   return (
-    <Container>
+    <Container fluid={true} style={{ paddingLeft: 0, paddingRight: 0 }}>
       <Styles>
         <div className="globalMain" />
         <div>
