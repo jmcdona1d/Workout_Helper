@@ -27,7 +27,7 @@ const Styles = styled.div`
 
 function App() {
   return (
-    <Container>
+    <Container fluid="true">
       <Styles>
         <div className="globalMain" />
         <div>

@@ -21,7 +21,7 @@ const Styles = styled.div`
 export default class NavBar extends React.Component {
   render() {
     return (
-      <Container>
+      <Container fluid="true">
         <Styles>
           <Navbar expand="lg">
             <NavbarBrand href="/">

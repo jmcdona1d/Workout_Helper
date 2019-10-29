@@ -22,10 +22,10 @@ const Styles = styled.div`
 export default class BotJumbo extends React.Component {
   render() {
     return (
-      <Container>
+      <Container fluid="true">
         <Styles>
           <Navbar fluid className="BotJumbo">
-            <Container className="BotJumbo-title">
+            <Container fluid="true" className="BotJumbo-title">
               <h8 className="h5-coloured">
                 <i>
                   "The Simplest and Most Effective Training System to Build Raw

@@ -29,11 +29,11 @@ const Styles = styled.div`
 export default class Jumbotron extends React.Component {
   render() {
     return (
-      <Container>
+      <Container fluid="true">
         <Styles>
           <Jumbo fluid className="jumbo">
             <div className="overlay" />
-            <Container className="Jumbotron-title">
+            <Container fluid="true" className="Jumbotron-title">
               <h3>Welcome to the workout planner</h3>
               <p>Brace yourself for max gainz</p>
             </Container>

@@ -4,7 +4,7 @@ import { Container } from "react-bootstrap";
 export default class About extends React.Component {
   render() {
     return (
-      <Container>
+      <Container fluid="true">
         <h4>About</h4>
         <p>
           This is a simple calculator app meant for use in the 5/3/1 progressive
