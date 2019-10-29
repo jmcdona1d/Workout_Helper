@@ -1,5 +1,5 @@
 import React from "react";
-import { Jumbotron as Jumbo, Container } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import styled from "styled-components";
 import deadlift from "../resources/Deadlift_pic.jpg";
 import "../App.css";
@@ -22,7 +22,7 @@ const Styles = styled.div`
 export default class BotJumbo extends React.Component {
   render() {
     return (
-      <Container>
+      <React.Fragment>
         <Styles>
           <Navbar fluid className="BotJumbo">
             <Container className="BotJumbo-title">
@@ -36,7 +36,7 @@ export default class BotJumbo extends React.Component {
             </Container>
           </Navbar>
         </Styles>
-      </Container>
+      </React.Fragment>
     );
   }
 }

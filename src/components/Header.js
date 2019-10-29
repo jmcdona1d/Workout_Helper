@@ -1,5 +1,5 @@
 import React from "react";
-import { Nav, Navbar, NavbarBrand, Container } from "react-bootstrap";
+import { Nav, Navbar, NavbarBrand} from "react-bootstrap";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import "../App.css";
@@ -21,7 +21,7 @@ const Styles = styled.div`
 export default class NavBar extends React.Component {
   render() {
     return (
-      <Container>
+      <React.Fragment>
         <Styles>
           <Navbar expand="lg">
             <NavbarBrand href="/">
@@ -44,7 +44,7 @@ export default class NavBar extends React.Component {
             </Navbar.Collapse>
           </Navbar>
         </Styles>
-      </Container>
+      </React.Fragment>
     );
   }
 }

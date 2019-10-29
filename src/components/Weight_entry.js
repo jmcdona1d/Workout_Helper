@@ -88,7 +88,7 @@ export default class NameForm extends React.Component {
   render() {
     if (!this.state.valuesEntered) {
       return (
-        <Container className="weightEntry">
+        <Container fluid={true} className="weightEntry">
           <Row>
             <div class="col-md-5">
               <h4>Please enter 1 Rep Maxes:</h4>
@@ -163,11 +163,11 @@ export default class NameForm extends React.Component {
       var Bench = parseInt(this.state.bench);
 
       return (
-        <Container>
+        <Container fluid={true}>
           <h1></h1>
           <h4>Weights for week {this.state.weekNum}:</h4>{" "}
           <RepList week={this.state.weekNum} />
-          <Container>
+          <Container fluid={true}>
             <Row>
               <Col>Deadlift</Col>
               <Col>Overhead Press</Col>

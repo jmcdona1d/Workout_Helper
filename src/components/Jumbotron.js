@@ -29,7 +29,7 @@ const Styles = styled.div`
 export default class Jumbotron extends React.Component {
   render() {
     return (
-      <Container>
+      <React.Fragment>
         <Styles>
           <Jumbo fluid className="jumbo">
             <div className="overlay" />
@@ -39,7 +39,7 @@ export default class Jumbotron extends React.Component {
             </Container>
           </Jumbo>
         </Styles>
-      </Container>
+      </React.Fragment>
     );
   }
 }
