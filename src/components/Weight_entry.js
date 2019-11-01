@@ -91,7 +91,7 @@ export default class NameForm extends React.Component {
         <Container fluid={true} className="weightEntry">
           <Row>
             <div class="col-md-5">
-              <h4>Please enter 1 Rep Maxes:</h4>
+              <h4>Enter 1-Rep Maxes:</h4>
             </div>
           </Row>
           <form onSubmit={this.handleSubmit}>
@@ -197,7 +197,9 @@ export default class NameForm extends React.Component {
               <button onClick={this.editValues}>Edit 1 Rep Maxes</button>
             </Col>
           </Container>
-          <h1></h1>
+          <h1> </h1>
+          <h1> </h1>
+          <h1> </h1>
         </Container>
       );
     }

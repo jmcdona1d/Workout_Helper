@@ -9,7 +9,7 @@ const Styles = styled.div`
     background: url(${deadlift}) no-repeat fixed bottom;
     background-size: cover;
     color: #ccc;
-    height: 200px;
+    height: 260px;
     position: relative;
     z-index: 1;
   }

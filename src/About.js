@@ -1,9 +1,10 @@
 import React from "react";
+import { Container } from "react-bootstrap";
 
 export default class About extends React.Component {
   render() {
     return (
-      <React.Fragment>
+      <Container fluid={true}>
         <h4>About</h4>
         <p>
           This is a simple calculator app meant for use in the 5/3/1 progressive
@@ -28,7 +29,12 @@ export default class About extends React.Component {
             them yourself and submit a pull request.
           </p>
         </p>
-      </React.Fragment>
+        <h1> </h1>
+        <h1> </h1>
+
+        <h1> </h1>
+        <h1> </h1>
+      </Container>
     );
   }
 }
