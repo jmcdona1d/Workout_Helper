@@ -29,11 +29,6 @@ export default class About extends React.Component {
             them yourself and submit a pull request.
           </p>
         </p>
-        <h1> </h1>
-        <h1> </h1>
-
-        <h1> </h1>
-        <h1> </h1>
       </Container>
     );
   }

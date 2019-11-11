@@ -25,7 +25,7 @@ export default class NavBar extends React.Component {
         <Styles>
           <Navbar expand="lg">
             <NavbarBrand href="/">
-              <h2 className="h2-coloured">5/3/1 Workout Planer</h2>
+              <h2 className="h2-coloured">5/3/1 Workout Planner</h2>
             </NavbarBrand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
