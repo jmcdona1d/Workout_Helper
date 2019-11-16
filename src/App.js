@@ -25,36 +25,71 @@ const Styles = styled.div`
   }
 `;
 
-function App() {
-  return (
-    <Container
-      fluid={true}
-      style={{
-        paddingLeft: 0,
-        paddingRight: 0,
-        paddingBottom: 0,
-        paddingTop: 0
-      }}
-    >
-      <Styles>
-        <div className="globalMain" />
-        <div>
-          <Layout>
-            <Router>
-              <NavBar />
-              <Jumbotron />
-              <Switch>
-                <Route exact path="/" component={Home} />
-                <Route path="/About" component={About} />
-                <Route component={NoMatch} />
-              </Switch>
-              <BotJumbo />
-            </Router>
-          </Layout>
-        </div>
-      </Styles>
-    </Container>
-  );
+class App extends React.Component {
+  state = {
+    data: null
+  };
+
+  componentDidMount() {
+    this.callBackendAPI()
+      .then(res => this.setState({ data: res.express }))
+      .catch(err => console.log(err));
+  }
+
+  callBackendAPI = async () => {
+    const response = await fetch("/express_backend");
+    const body = await response.json();
+
+    if (response.status !== 200) {
+      throw Error(body.message);
+    }
+
+    return body;
+  };
+
+  render() {
+    return (
+      <div className="App">
+        <header className="App-header">
+          <h1 className="App-title">Welcome to React</h1>
+        </header>
+        // Render the newly fetched data inside of this.state.data
+        <p className="App-intro">{this.state.data}</p>
+      </div>
+    );
+  }
 }
+
+// function App() {
+//   return (
+//     <Container
+//       fluid={true}
+//       style={{
+//         paddingLeft: 0,
+//         paddingRight: 0,
+//         paddingBottom: 0,
+//         paddingTop: 0
+//       }}
+//     >
+//       <Styles>
+//         <div className="globalMain" />
+//         <div>
+//           <Layout>
+//             <Router>
+//               <NavBar />
+//               <Jumbotron />
+//               <Switch>
+//                 <Route exact path="/" component={Home} />
+//                 <Route path="/About" component={About} />
+//                 <Route component={NoMatch} />
+//               </Switch>
+//               <BotJumbo />
+//             </Router>
+//           </Layout>
+//         </div>
+//       </Styles>
+//     </Container>
+//   );
+// }
 
 export default App;

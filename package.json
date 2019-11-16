@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "bootstrap": "^4.3.1",
+    "express": "^4.17.1",
     "jquery": "^3.4.1",
     "popper.js": "^1.14.7",
     "react": "^16.9.0",
@@ -39,5 +40,6 @@
   "devDependencies": {
     "@typescript-eslint/parser": "^2.3.2",
     "eslint": "^6.5.0"
-  }
+  },
+  "proxy": "http://localhost:5000/"
 }
