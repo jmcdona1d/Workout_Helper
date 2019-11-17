@@ -22,7 +22,8 @@ export default class NameForm extends React.Component {
       squat: "",
       bench: "",
       weekNum: 1,
-      percentage1: 0.65
+      percentage1: 0.65,
+      cycle: 0
     };
 
     this.handleInputChange = this.handleInputChange.bind(this);
@@ -59,6 +60,7 @@ export default class NameForm extends React.Component {
     var week = parseInt(this.state.weekNum) + 1;
     if (week === 5) {
       //control so weeks only go from 1 - 4
+      this.changeCycle(event);
       week = 1;
     }
 
@@ -83,6 +85,22 @@ export default class NameForm extends React.Component {
 
   editValues(event) {
     this.setState({ valuesEntered: false });
+  }
+
+  changeCycle(event) {
+    const newCycle = this.state.cycle + 1;
+    const newDead = parseInt(this.state.dead) + 10;
+    const newOHP = parseInt(this.state.ohp) + 5;
+    const newSquat = parseInt(this.state.squat) + 10;
+    const newBench = parseInt(this.state.bench) + 5;
+
+    this.setState({
+      dead: newDead,
+      ohp: newOHP,
+      squat: newSquat,
+      bench: newBench,
+      cycle: newCycle
+    });
   }
 
   render() {
