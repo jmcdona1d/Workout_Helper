@@ -1,6 +1,7 @@
 import React from "react";
 import RepList from "./RepList";
 import Header from "./Header";
+import CycleModal from "./CycleModal";
 
 import { Container, Row, Col } from "react-bootstrap";
 
