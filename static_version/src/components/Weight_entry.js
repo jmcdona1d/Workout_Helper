@@ -1,9 +1,8 @@
 import React from "react";
 import RepList from "./RepList";
 import Header from "./Header";
-import CycleModal from "./CycleModal";
 
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Modal, Button } from "react-bootstrap";
 
 import styled from "styled-components";
 
@@ -24,13 +23,20 @@ export default class NameForm extends React.Component {
       bench: "",
       weekNum: 1,
       percentage1: 0.65,
-      cycle: 0
+      cycle: 0,
+      showModal: false
     };
 
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.changeWeek = this.changeWeek.bind(this);
     this.editValues = this.editValues.bind(this);
+    this.handleToggleModal = this.handleToggleModal.bind(this);
+  }
+
+  handleToggleModal(event) {
+    const flipped = !this.state.showModal;
+    this.setState({ showModal: flipped });
   }
 
   handleInputChange(event) {
@@ -183,6 +189,22 @@ export default class NameForm extends React.Component {
 
       return (
         <Container fluid={true}>
+          <Modal
+            show={this.state.showModal}
+            onHide={this.handleToggleModal}
+            animation={false}
+          >
+            <Modal.Header closeButton>
+              <Modal.Title>Modal heading</Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+              Woohoo, you're reading this text in a modal!
+            </Modal.Body>
+            <Modal.Footer>
+              <Button variant="secondary">Close</Button>
+              <Button variant="primary">Save Changes</Button>
+            </Modal.Footer>
+          </Modal>
           <h1></h1>
           <h4>Weights for week {this.state.weekNum}:</h4>{" "}
           <RepList week={this.state.weekNum} />
@@ -214,6 +236,7 @@ export default class NameForm extends React.Component {
             <Col>
               <button onClick={this.changeWeek}>Cycle Weeks</button>
               <button onClick={this.editValues}>Edit 1 Rep Maxes</button>
+              <button onClick={this.handleToggleModal}>test modal</button>
             </Col>
           </Container>
           <h1> </h1>
