@@ -32,11 +32,29 @@ export default class NameForm extends React.Component {
     this.changeWeek = this.changeWeek.bind(this);
     this.editValues = this.editValues.bind(this);
     this.handleToggleModal = this.handleToggleModal.bind(this);
+    this.handleModalProgress = this.handleModalProgress.bind(this);
+    this.handleModalRepeat = this.handleModalRepeat.bind(this);
   }
 
   handleToggleModal(event) {
     const flipped = !this.state.showModal;
     this.setState({ showModal: flipped });
+  }
+
+  handleModalProgress(event) {
+    //set week to 0 to start new cycle - increase weights
+    console.log("myea)");
+    this.setState({ weekNum: 0 });
+    this.changeCycle();
+    this.changeWeek();
+    this.handleToggleModal();
+  }
+
+  handleModalRepeat(event) {
+    //set week to 0 and dont change the weights
+    this.setState({ weekNum: 0 });
+    this.changeWeek();
+    this.handleToggleModal();
   }
 
   handleInputChange(event) {
@@ -67,8 +85,8 @@ export default class NameForm extends React.Component {
     var week = parseInt(this.state.weekNum) + 1;
     if (week === 5) {
       //control so weeks only go from 1 - 4
-      this.changeCycle(event);
-      week = 1;
+      this.handleToggleModal();
+      //modal will either set week to 0 (makes it 1) or set to 4 again
     }
 
     switch (week) {
@@ -195,14 +213,20 @@ export default class NameForm extends React.Component {
             animation={false}
           >
             <Modal.Header closeButton>
-              <Modal.Title>Modal heading</Modal.Title>
+              <Modal.Title>Advance Cycle</Modal.Title>
             </Modal.Header>
             <Modal.Body>
-              Woohoo, you're reading this text in a modal!
+              Congrats on finishing a cycle. Select to increase weight if all
+              reps were preformed succesfully - otherwise repeat the same
+              weights
             </Modal.Body>
             <Modal.Footer>
-              <Button variant="secondary">Close</Button>
-              <Button variant="primary">Save Changes</Button>
+              <Button variant="secondary" onClick={this.handleModalProgress}>
+                Repeat cycle
+              </Button>
+              <Button variant="primary" onClick={this.handleModalRepeat}>
+                Advance to next Cycle
+              </Button>
             </Modal.Footer>
           </Modal>
           <h1></h1>
@@ -234,7 +258,7 @@ export default class NameForm extends React.Component {
               <Col>{(Bench * (this.state.percentage1 + 0.2)).toFixed(0)}</Col>
             </Row>
             <Col>
-              <button onClick={this.changeWeek}>Cycle Weeks</button>
+              <button onClick={this.changeWeek}>Next Week</button>
               <button onClick={this.editValues}>Edit 1 Rep Maxes</button>
               <button onClick={this.handleToggleModal}>test modal</button>
             </Col>
