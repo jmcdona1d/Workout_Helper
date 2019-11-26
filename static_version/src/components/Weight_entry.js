@@ -34,6 +34,7 @@ export default class NameForm extends React.Component {
     this.handleToggleModal = this.handleToggleModal.bind(this);
     this.handleModalProgress = this.handleModalProgress.bind(this);
     this.handleModalRepeat = this.handleModalRepeat.bind(this);
+    this.resetWeekNum = this.resetWeekNum.bind(this);
   }
 
   handleToggleModal(event) {
@@ -41,10 +42,13 @@ export default class NameForm extends React.Component {
     this.setState({ showModal: flipped });
   }
 
+  resetWeekNum(event) {
+    this.setState({ weekNum: 0 });
+  }
+
   handleModalProgress(event) {
     //set week to 0 to start new cycle - increase weights
-    console.log("myea)");
-    this.setState({ weekNum: 0 });
+    this.resetWeekNum();
     this.changeCycle();
     this.changeWeek();
     this.handleToggleModal();
@@ -52,7 +56,7 @@ export default class NameForm extends React.Component {
 
   handleModalRepeat(event) {
     //set week to 0 and dont change the weights
-    this.setState({ weekNum: 0 });
+    this.resetWeekNum();
     this.changeWeek();
     this.handleToggleModal();
   }
@@ -86,25 +90,26 @@ export default class NameForm extends React.Component {
     if (week === 5) {
       //control so weeks only go from 1 - 4
       this.handleToggleModal();
+      week = 0;
       //modal will either set week to 0 (makes it 1) or set to 4 again
-    }
+    } else
+      switch (week) {
+        case 1:
+          this.setState({ percentage1: 0.65 });
+          break;
+        case 2:
+          this.setState({ percentage1: 0.7 });
+          break;
+        case 3:
+          this.setState({ percentage1: 0.75 });
+          break;
+        case 4:
+          this.setState({ percentage1: 0.4 });
+          break;
+        default:
+          this.setState({ percentage1: 0.65 });
+      }
 
-    switch (week) {
-      case 1:
-        this.setState({ percentage1: 0.65 });
-        break;
-      case 2:
-        this.setState({ percentage1: 0.7 });
-        break;
-      case 3:
-        this.setState({ percentage1: 0.75 });
-        break;
-      case 4:
-        this.setState({ percentage1: 0.4 });
-        break;
-      default:
-        this.setState({ percentage1: 0.65 });
-    }
     this.setState({ weekNum: week });
   }
 
