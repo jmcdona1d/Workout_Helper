@@ -46,9 +46,10 @@ export default class NameForm extends React.Component {
     this.setState({ weekNum: 0 });
   }
 
-  handleModalProgress(event) {
+  async handleModalProgress(event) {
     //set week to 0 to start new cycle - increase weights
     this.resetWeekNum();
+    console.log(this.state);
     this.changeCycle();
     this.changeWeek();
     this.handleToggleModal();
@@ -90,7 +91,7 @@ export default class NameForm extends React.Component {
     if (week === 5) {
       //control so weeks only go from 1 - 4
       this.handleToggleModal();
-      week = 0;
+      week = 4;
       //modal will either set week to 0 (makes it 1) or set to 4 again
     } else
       switch (week) {
@@ -216,6 +217,7 @@ export default class NameForm extends React.Component {
             show={this.state.showModal}
             onHide={this.handleToggleModal}
             animation={false}
+            backdrop="static"
           >
             <Modal.Header closeButton>
               <Modal.Title>Advance Cycle</Modal.Title>
