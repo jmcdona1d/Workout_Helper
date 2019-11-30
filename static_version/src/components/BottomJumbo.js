@@ -8,6 +8,10 @@ import { Navbar } from "react-bootstrap";
 const Styles = styled.div`
   .BotJumbo {
     background-color: #752;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
   }
   a,
   .navbar-brand,

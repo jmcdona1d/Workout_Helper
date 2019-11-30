@@ -15,7 +15,6 @@ export default class About extends React.Component {
           <a href="https://jimwendler.com/blogs/jimwendler-com/101065094-5-3-1-for-a-beginner">
             <i>Jim Wendler's blog</i>.
           </a>
-          <h5> </h5>
           <p>
             This site is an open source project created by Github User{" "}
             <a href="https://github.com/jmcdona1d">
@@ -28,7 +27,6 @@ export default class About extends React.Component {
             Feel free to raise suggestions/improvements in an issue or tackle
             them yourself and submit a pull request.
           </p>
-          <h5></h5>
           <p>
             Some features that are currently in development are:{" "}
             <ul>

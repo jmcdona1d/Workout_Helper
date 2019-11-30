@@ -202,7 +202,7 @@ export default class NameForm extends React.Component {
               </div>
             </Row>
           </form>
-          <h1></h1>
+          {/* <h1> _</h1> */}
         </Container>
       );
     } else {

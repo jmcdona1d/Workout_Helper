@@ -23,6 +23,12 @@
   color: #61dafb;
 }
 
+html,
+body,
+#app,
+#app > div {
+  height: 100%;
+}
 .Jumbotron-title {
   /* color: rgb(91, 58, 236); */
   color: white;
