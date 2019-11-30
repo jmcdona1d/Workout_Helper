@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/Workout_Helper/static/css/main.5efa301c.chunk.css",
-    "main.js": "/Workout_Helper/static/js/main.cbdb3752.chunk.js",
-    "main.js.map": "/Workout_Helper/static/js/main.cbdb3752.chunk.js.map",
-    "runtime~main.js": "/Workout_Helper/static/js/runtime~main.d887d386.js",
-    "runtime~main.js.map": "/Workout_Helper/static/js/runtime~main.d887d386.js.map",
-    "static/css/2.266e55a5.chunk.css": "/Workout_Helper/static/css/2.266e55a5.chunk.css",
-    "static/js/2.65c62cfc.chunk.js": "/Workout_Helper/static/js/2.65c62cfc.chunk.js",
-    "static/js/2.65c62cfc.chunk.js.map": "/Workout_Helper/static/js/2.65c62cfc.chunk.js.map",
-    "index.html": "/Workout_Helper/index.html",
-    "precache-manifest.4effc87e1ef5f142b93e7d9af0da82e9.js": "/Workout_Helper/precache-manifest.4effc87e1ef5f142b93e7d9af0da82e9.js",
-    "service-worker.js": "/Workout_Helper/service-worker.js",
-    "static/css/2.266e55a5.chunk.css.map": "/Workout_Helper/static/css/2.266e55a5.chunk.css.map",
-    "static/css/main.5efa301c.chunk.css.map": "/Workout_Helper/static/css/main.5efa301c.chunk.css.map",
-    "static/media/Deadlift_pic.jpg": "/Workout_Helper/static/media/Deadlift_pic.26293212.jpg",
-    "static/media/pattern_background.png": "/Workout_Helper/static/media/pattern_background.c12076b2.png"
+    "main.css": "/Workout_Helper/static_version/static/css/main.6db34bea.chunk.css",
+    "main.js": "/Workout_Helper/static_version/static/js/main.bb903834.chunk.js",
+    "main.js.map": "/Workout_Helper/static_version/static/js/main.bb903834.chunk.js.map",
+    "runtime~main.js": "/Workout_Helper/static_version/static/js/runtime~main.68ea8826.js",
+    "runtime~main.js.map": "/Workout_Helper/static_version/static/js/runtime~main.68ea8826.js.map",
+    "static/css/2.266e55a5.chunk.css": "/Workout_Helper/static_version/static/css/2.266e55a5.chunk.css",
+    "static/js/2.1736d853.chunk.js": "/Workout_Helper/static_version/static/js/2.1736d853.chunk.js",
+    "static/js/2.1736d853.chunk.js.map": "/Workout_Helper/static_version/static/js/2.1736d853.chunk.js.map",
+    "index.html": "/Workout_Helper/static_version/index.html",
+    "precache-manifest.dd64718213ea221178adae5ee50f9fa1.js": "/Workout_Helper/static_version/precache-manifest.dd64718213ea221178adae5ee50f9fa1.js",
+    "service-worker.js": "/Workout_Helper/static_version/service-worker.js",
+    "static/css/2.266e55a5.chunk.css.map": "/Workout_Helper/static_version/static/css/2.266e55a5.chunk.css.map",
+    "static/css/main.6db34bea.chunk.css.map": "/Workout_Helper/static_version/static/css/main.6db34bea.chunk.css.map",
+    "static/media/Deadlift_pic.jpg": "/Workout_Helper/static_version/static/media/Deadlift_pic.26293212.jpg",
+    "static/media/pattern_background.png": "/Workout_Helper/static_version/static/media/pattern_background.c12076b2.png"
   }
 }
