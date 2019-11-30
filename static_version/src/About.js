@@ -28,6 +28,20 @@ export default class About extends React.Component {
             Feel free to raise suggestions/improvements in an issue or tackle
             them yourself and submit a pull request.
           </p>
+          <h5></h5>
+          <p>
+            Some features that are currently in development are:{" "}
+            <ul>
+              <li>
+                Option to repaeat cycles weights or increase them after 4 weeks
+              </li>
+              <li>
+                A login system that can persist your weights when you leave
+              </li>
+              <li>Automatic week switching</li>
+              <li>Weight plate calculator</li>
+            </ul>
+          </p>
         </p>
       </Container>
     );

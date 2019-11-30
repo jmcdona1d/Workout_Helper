@@ -90,8 +90,8 @@ export default class NameForm extends React.Component {
     var week = parseInt(this.state.weekNum) + 1;
     if (week === 5) {
       //control so weeks only go from 1 - 4
-      this.handleToggleModal();
-      week = 4;
+      this.changeCycle();
+      week = 1;
       //modal will either set week to 0 (makes it 1) or set to 4 again
     } else
       switch (week) {
@@ -265,9 +265,12 @@ export default class NameForm extends React.Component {
               <Col>{(Bench * (this.state.percentage1 + 0.2)).toFixed(0)}</Col>
             </Row>
             <Col>
-              <button onClick={this.changeWeek}>Next Week</button>
-              <button onClick={this.editValues}>Edit 1 Rep Maxes</button>
-              <button onClick={this.handleToggleModal}>test modal</button>
+              <Button variant="primary" onClick={this.changeWeek}>
+                Next Week
+              </Button>
+              <Button variant="secondary" onClick={this.editValues}>
+                Edit 1 Rep Maxes
+              </Button>
             </Col>
           </Container>
           <h1> </h1>
