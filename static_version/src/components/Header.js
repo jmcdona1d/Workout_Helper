@@ -1,8 +1,9 @@
 import React from "react";
-import { Nav, Navbar, NavbarBrand} from "react-bootstrap";
+import { Nav, Navbar, NavbarBrand } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import "../App.css";
+import NavbarCollapse from "react-bootstrap/NavbarCollapse";
 
 const Styles = styled.div`
   .navbar {
@@ -41,6 +42,9 @@ export default class NavBar extends React.Component {
                   </Nav.Link>
                 </Nav.Item>
               </Nav>
+              <a href="https://github.com/jmcdona1d/Workout_Helper/tree/master/static_version">
+                <i>GitHub Repository</i>
+              </a>
             </Navbar.Collapse>
           </Navbar>
         </Styles>

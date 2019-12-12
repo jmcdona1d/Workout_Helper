@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/Workout_Helper/static_version/static/css/main.6db34bea.chunk.css",
+    "main.js": "/Workout_Helper/static_version/static/js/main.bb903834.chunk.js",
+    "main.js.map": "/Workout_Helper/static_version/static/js/main.bb903834.chunk.js.map",
+    "runtime~main.js": "/Workout_Helper/static_version/static/js/runtime~main.68ea8826.js",
+    "runtime~main.js.map": "/Workout_Helper/static_version/static/js/runtime~main.68ea8826.js.map",
+    "static/css/2.266e55a5.chunk.css": "/Workout_Helper/static_version/static/css/2.266e55a5.chunk.css",
+    "static/js/2.1736d853.chunk.js": "/Workout_Helper/static_version/static/js/2.1736d853.chunk.js",
+    "static/js/2.1736d853.chunk.js.map": "/Workout_Helper/static_version/static/js/2.1736d853.chunk.js.map",
+    "index.html": "/Workout_Helper/static_version/index.html",
+    "precache-manifest.dd64718213ea221178adae5ee50f9fa1.js": "/Workout_Helper/static_version/precache-manifest.dd64718213ea221178adae5ee50f9fa1.js",
+    "service-worker.js": "/Workout_Helper/static_version/service-worker.js",
+    "static/css/2.266e55a5.chunk.css.map": "/Workout_Helper/static_version/static/css/2.266e55a5.chunk.css.map",
+    "static/css/main.6db34bea.chunk.css.map": "/Workout_Helper/static_version/static/css/main.6db34bea.chunk.css.map",
+    "static/media/Deadlift_pic.jpg": "/Workout_Helper/static_version/static/media/Deadlift_pic.26293212.jpg",
+    "static/media/pattern_background.png": "/Workout_Helper/static_version/static/media/pattern_background.c12076b2.png"
+  }
+}
