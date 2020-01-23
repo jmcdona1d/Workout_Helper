@@ -8,9 +8,11 @@
 - A static version of this project is hosted at https://workout-deploy.firebaseapp.com and its resources are found in the directory */static_version* in this repo
 
 
+### work in Progress:
+-Using Node js to implement a backedn login system and user tracking
+
 ### Future Updates:
 
-- Using Node js to implement a login system and user tracking
 - Allow option to increase or not after 4 weeks
 - Add some sort of weight plate calculator
 - Create a mobile app
