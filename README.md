@@ -9,7 +9,7 @@
 
 
 ### work in Progress:
--Using Node js to implement a backedn login system and user tracking
+-Using Node js to implement a backend login system and user tracking
 
 ### Future Updates:
 
